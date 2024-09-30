@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { HTMLButtonAttributes, MouseEventHandler } from "svelte/elements";
+  import type { HTMLButtonAttributes } from "svelte/elements";
   interface DrumPadProps extends HTMLButtonAttributes {
     onPress?(
       e: (MouseEvent | TouchEvent) & { currentTarget: EventTarget & HTMLButtonElement },
@@ -37,6 +37,6 @@
 
 <style lang="postcss">
   button {
-    @apply size-24 btn btn-primary touch-none;
+    @apply aspect-square size-full btn btn-primary touch-none;
   }
 </style>

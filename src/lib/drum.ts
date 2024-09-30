@@ -1,4 +1,5 @@
 import { Howl } from "howler";
+import type { KeyMapping } from "./keyboard";
 
 export interface DrumPart {
   key: string;
@@ -21,6 +22,25 @@ export const joshDum: DrumPart[] = [
   { key: "tom2", name: "Tom 2", src: "/drums/josh-dum/tom2.ogg" },
   { key: "ride", name: "Ride", src: "/drums/josh-dum/ride.ogg" },
   { key: "splash", name: "Splash", src: "/drums/josh-dum/splash.ogg" },
+];
+
+export const defaultKeyMappings: KeyMapping[] = [
+  ["B", "kick"],
+  ["X", "kick"],
+  ["N", "hihat-closed"],
+  ["Z", "hihat-closed"],
+  ["M", "hihat-open"],
+  ["C", "snare1"],
+  ["V", "snare1"],
+  ["R", "splash"],
+  ["E", "crash1"],
+  ["U", "crash2"],
+  ["F", "tom1"],
+  ["G", "tom1"],
+  ["H", "tom2"],
+  ["J", "tom2"],
+  ["Y", "bell"],
+  ["T", "ride"],
 ];
 
 export function initKit(kit: DrumPart[]): DrumKit {
