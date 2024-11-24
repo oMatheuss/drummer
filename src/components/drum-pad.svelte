@@ -30,13 +30,8 @@
   ontouchstartcapture={handleTouchStart}
   onmousedowncapture={onPress}
   style="transform: scale({$size}); opacity: {$size}; transform-origin: center"
+  class="aspect-square size-full btn btn-primary touch-none"
   {...props}
 >
   {@render children!()}
 </button>
-
-<style lang="postcss">
-  button {
-    @apply aspect-square size-full btn btn-primary touch-none;
-  }
-</style>

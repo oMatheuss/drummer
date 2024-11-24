@@ -1,10 +1,17 @@
 {
-	"singleQuote": false,
-	"tabWidth": 2,
-	"quoteProps": "consistent",
-	"endOfLine": "lf",
-	"semi": true,
-	"printWidth": 100,
-	"plugins": ["prettier-plugin-svelte"],
-	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+  "singleQuote": false,
+  "tabWidth": 2,
+  "quoteProps": "consistent",
+  "endOfLine": "lf",
+  "semi": true,
+  "printWidth": 100,
+  "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ]
 }
