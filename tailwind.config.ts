@@ -7,6 +7,9 @@ const config: Config = {
     extend: {},
   },
   plugins: [daisyui],
+  daisyui: {
+    themes: ["light", "dark", "black"],
+  },
 };
 
 export default config;
