@@ -1,5 +1,6 @@
 import { Howl } from "howler";
 import type { KeyMapping } from "./keyboard";
+import { PUBLIC_BASE_URL } from "$env/static/public";
 
 export interface DrumPart {
   key: string;
@@ -43,10 +44,12 @@ export const defaultKeyMappings: KeyMapping[] = [
   ["T", "ride"],
 ];
 
+const BASE_URL = PUBLIC_BASE_URL ?? "";
+
 export function initKit(kit: DrumPart[]): DrumKit {
   const drumKit: DrumKit = {};
   for (const part of kit) {
-    const audio = new Howl({ src: part.src });
+    const audio = new Howl({ src: `${BASE_URL}${part.src}` });
     drumKit[part.key] = audio;
   }
   return drumKit as DrumKit;
