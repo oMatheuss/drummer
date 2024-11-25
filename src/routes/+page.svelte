@@ -20,7 +20,6 @@
 
   function play(part: string) {
     const audio = kit[part];
-    audio.stereo();
     audio.play();
     pad[part].press();
   }
@@ -49,9 +48,9 @@
   });
 </script>
 
-<h1 class="text-2xl font-bold mb-4">Welcome to Drummer</h1>
+<h1 class="mb-4 text-2xl font-bold">Welcome to Drummer</h1>
 
-<div class="flex flex-col items-center gap-3 w-full">
+<div class="flex w-full flex-col items-center gap-3">
   <div class="drum-pad-grid">
     {#each joshDum as part}
       <DrumPad
@@ -95,10 +94,10 @@
 
 <style lang="postcss">
   .drum-pad-grid {
-    @apply max-w-96 lg:max-w-2xl w-full grid grid-cols-3 lg:grid-cols-6 gap-2 border-4 border-neutral p-2 rounded-box;
+    @apply grid w-full max-w-96 grid-cols-3 gap-2 rounded-box border-4 border-neutral p-2 lg:max-w-2xl lg:grid-cols-6;
   }
 
   .drum-actions-grid {
-    @apply max-w-96 lg:max-w-2xl w-full border-4 border-neutral p-2 rounded-box flex gap-2 flex-wrap;
+    @apply flex w-full max-w-96 flex-wrap gap-2 rounded-box border-4 border-neutral p-2 lg:max-w-2xl;
   }
 </style>
